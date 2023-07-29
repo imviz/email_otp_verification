@@ -1,8 +1,8 @@
 import yagmail
 
 # Set up your email credentials
-sender_email = 'wedidsolutions@gmail.com'
-sender_password = 'qwrwyvgwlfqdkgsd'
+sender_email = 'changeme'
+sender_password = 'changeme'
 
 # Create a yagmail SMTP client
 yag = yagmail.SMTP(sender_email, sender_password)

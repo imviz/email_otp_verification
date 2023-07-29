@@ -20,7 +20,7 @@ def user_register(request):
         user=User.objects.create(first_name=details["first_name"],last_name=details["last_name"],email=details["email"],password=details["password"])
         otp=otp_generation()
         EmailOtp.objects.create(email=user,otp=otp)
-        recipient_email = 'vishnuedappatt@gmail.com'
+        recipient_email = 'changeme'
         subject = 'Test Email'
         body = f'your One Time Password is \n {otp} .Dont share this otp to any one'        
         send_email(recipient_email, subject, body, )
@@ -78,7 +78,7 @@ def otp_renewal(request):
             return Response(message,status=status.HTTP_400_BAD_REQUEST)
         otp=otp_generation()
         EmailOtp.objects.create(email=user,otp=otp)
-        recipient_email = 'vishnuedappatt@gmail.com'
+        recipient_email = 'changeme'
         subject = 'Test Email'
         body = f'your One Time Password is \n {otp} .Dont share this otp to any one'        
         send_email(recipient_email, subject, body, )
